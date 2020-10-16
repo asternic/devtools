@@ -1,0 +1,11 @@
+.specialnav{
+    height: 50px;
+    padding: 0;
+}
+.codemirror{
+    border: 1px solid black!important;
+
+}
+#error{
+    display: none;
+}

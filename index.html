@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Online Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/theme/mdn-like.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/lint/lint.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/selection/active-line.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/lint/json-lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonlint/1.6.0/jsonlint.min.js"></script>
+</head>
+
+<body>
+<div class="container ">
+    <h3>JSON Lint & Validator</h3>
+    <textarea class="form-control codemirror-textarea" rows="5" autofocus=""></textarea>
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn btn-primary text-left mt-2 mr-2 " id="validate">Validate JSON</button>
+            <button class="btn btn-primary text-left mt-2 mr-2" id="reset">Clear</button>
+        </div>
+    </div>
+    <div id=error class="alert alert-danger mt-4 mb-4"> </div>
+
+    <hr style='border-color: #3498DB' />
+
+    <h3>Unix Timestamp</h3>
+
+    <form onsubmit="return convert();">
+      <div class="form-row align-items-center">
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInput">Timestamp</label>
+          <input type="text" class="form-control mb-2" id="timestamp" placeholder="">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+        <div class='col-auto'>
+    <div id='datetime' style='font-size:1.5em; color:#fff;'></div>
+        </div>
+      </div>
+    </form>
+
+    <hr style='border-color: #3498DB' />
+    <h3>Base64 Encode & Decode</h3>
+    <textarea rows=5 id='base64' class='form-control'></textarea>
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn btn-primary text-left mt-2 mr-2 " id="encode">Encode</button>
+            <button class="btn btn-primary text-left mt-2 mr-2" id="decode">Decode</button>
+            <button class="btn btn-primary text-left mt-2 mr-2" id="resetdecode">Clear</button>
+        </div>
+    </div>
+    <br/>
+    <textarea rows=5 id='base64result' class='form-control'></textarea>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!--script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script-->
+<script src="js/base64.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>
