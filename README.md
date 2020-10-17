@@ -12,5 +12,5 @@ Nothing mine, based on some free libraries and functions found around the net.
 
 These tools are hosted on https://tools.asternic.net
 
-
+There are no trackers at all, and all work is done on the browser so there is no data sent to any server.
 
