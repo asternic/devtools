@@ -95,7 +95,10 @@
               <input type="text" class="form-control mb-2" id="dnshost" placeholder="">
             </div>
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+              <button type="submit" id="dnssubmit" class="btn btn-primary mb-2">
+                  <span class="spinner-border spinner-border-sm d-none" role="status" id="dnsloading" aria-hidden="true"></span>
+                  <span id="dnsbuttontext">Submit</span>
+              </button>
             </div>
           </div>
         </form>
