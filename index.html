@@ -33,6 +33,10 @@
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" aria-controls="dns" aria-selected="false" href="#dns">DNS Query</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" aria-controls="dns" aria-selected="false" href="#rndpwd">Password Generator</a>
+  </li>
+
 </ul>
 
 <div class="tab-content" id="TabContent">
@@ -83,7 +87,7 @@
         </div>
         <br/>
         <textarea rows=10 id='base64result' class='form-control'></textarea>
-        <button class="btn btn-primary text-left mt-2 mr-2" id="copy">Copy to Clipboard</button>
+        <button class="btn btn-primary text-left mt-2 mr-2 copy" id="copy_base64result">Copy to Clipboard</button>
     </div>
 
     <!--hr style='border-color: #3498DB' /-->
@@ -106,11 +110,64 @@
         <textarea id='dnsresult' class="form-control codemirror-textarea" rows="10" autofocus=""></textarea>
         <!--pre class='dns' id='dnsresult'></pre-->
     </div>
+
+    <div class="tab-pane fade" id="rndpwd" role="tabpanel" aria-labelledby="rndpwd-tab">
+        <h3>Password Generator</h3>
+
+<form>
+  <div class="form-group row">
+    <label for="password" class="col-sm-2 col-form-label">Password:</label>
+    <div class="col-sm-10">
+      <input class="password" type="text" name="" placeholder="Create password" id="password" readonly>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="pwdLength" class="col-sm-2 col-form-label">Length</label>
+    <div class="col-sm-10">
+      <input type="number" class="password_option" id="pwdLength" placeholder="Length" value="14">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="pwdPrefix" class="col-sm-2 col-form-label">Prefix</label>
+    <div class="col-sm-10">
+      <input type="text" class="password_option" id="pwdPrefix" placeholder="Prefix">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="pwdPattern" class="col-sm-2 col-form-label">Pattern</label>
+    <div class="col-sm-10">
+      <input type="text" class="password_option" id="pwdPattern" placeholder="Pattern" value="[\d\w#$%]">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-2">Memorable</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="pwdMemorable">
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-primary text-left mt-2 mr-2 " id="genpass">Generate</button>
+                <button class="btn btn-primary text-left mt-2 mr-2 copy" id="copy_password">Copy to Clipboard</button>
+            </div>
+        </div>
+        <div id=error class="alert alert-danger mt-4 mb-4"> </div>
+    </div>
+
+
 </div>
 
 <script src="//code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="js/base64.js"></script>
+<script src="js/password-generator.js"></script>
 <script src="js/script.min.js"></script>
 </body>
 
